@@ -1246,5 +1246,7 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
-* Run execute   
+* Select all the sql code, and run execute   
 ![picture](step11.png)  
+* Refresh and see the `nortwind` db   
+![picture](step12.png)  
