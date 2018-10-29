@@ -13,3 +13,7 @@ https://dev.mysql.com/downloads/workbench/
 ![picture](step2.png)   
 
 Then run the app. 
+
+* Run `mySql` in `Xampp`   
+![picture](step3.png)  
+![picture](step4.png)  
