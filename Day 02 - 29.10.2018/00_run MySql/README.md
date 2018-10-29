@@ -6,7 +6,8 @@ https://www.apachefriends.org/index.html
    
 Then run the app.
 
-* Install `workbench` (gui for mySql) 
+* Install `workbench` (gui for mySql)   
+
 https://dev.mysql.com/downloads/workbench/   
 
 ![picture](step2.png)   
