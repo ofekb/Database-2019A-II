@@ -1,3 +1,7 @@
+# Tiers of generic app:
+* Database (can be `sql` or `no-sql`)
+* Server (uses the db and serves the data to the client)
+* client
 # REQUEST DEMO (using curl)
 ![picture](reqres.png)
 ![picture](server_client.png)
