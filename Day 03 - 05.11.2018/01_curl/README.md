@@ -2,9 +2,17 @@
 * Database (can be `sql` or `no-sql`)
 * Server (uses the db and serves the data to the client)
 * client
-# REQUEST DEMO (using curl)
-![picture](reqres.png)
+
+# Server VS Client
 ![picture](server_client.png)
+
+# REQUEST And Respomse
+* `C` - CREATE - POST
+* `R` - READ - GET
+* `U` - UPDATE - PUT
+* `D` - DELETE -DELETE
+![picture](reqres.png)
+
 ### Server:
 https://reqres.in/
 ---
