@@ -13,6 +13,8 @@
 * `D` - DELETE -DELETE
 ![picture](reqres.png)
 
+### Curl basic commands:
+![picture](sumTable.png)
 ### Server:
 https://reqres.in/
 ---
