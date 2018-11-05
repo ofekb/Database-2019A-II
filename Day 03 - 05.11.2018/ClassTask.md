@@ -46,19 +46,18 @@
 curl -v -X GET https://jsonplaceholder.typicode.com/posts/1
 ```
 
-* Create this POST request with `curl`
+* POST request with `curl`
 ```
 curl -v -X POST -H "Content-type: application/json" -d "{\"title\": \"foo\",\"body\": \"bar\",\"userId\": \"1\"}"  https://jsonplaceholder.typicode.com/posts 
 ```
 
 
-* Create this PUT request with `curl`
+* PUT request with `curl`
 ```
 curl -v -X PUT -H "Content-type: application/json" -d "{\"title\": \"foo\",\"body\": \"bar\",\"userId\": \"1\", \"id\": \"1\"}" https://jsonplaceholder.typicode.com/posts/1
-
 ```
   
-* Create this DELETE request with `curl`
+* DELETE request with `curl`
 ```
 curl -v -X DELETE https://jsonplaceholder.typicode.com/posts/1
 ```
