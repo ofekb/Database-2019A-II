@@ -104,12 +104,12 @@ FOREIGN KEY (category_id) REFERENCES categories(category_id)
 
 ```
 
+***
 ### DataBase diagram:
-![picture](diagram0.png)   
-***
-***
+
 ![picture](diagram1.png)  
 
+***
 
 ### Commands to insert new rows in the tables 
 * Insert 3 new records to cities table
@@ -278,6 +278,7 @@ VALUES (4,2);
 
 
 
+***
 ### Commands to update rows in the tables 
 
 * Update the publisher details with id 1 to:  `publisher_birth_date` = '1988-10-09' and `publisher_age` = 30 
@@ -299,6 +300,7 @@ After change publishers table is:
 ![picture](publisher2.png) 
 
 
+***
 ### Select commands
 * Select all rows from publisher table
 ```sql
