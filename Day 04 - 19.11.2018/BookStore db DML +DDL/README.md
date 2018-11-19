@@ -184,7 +184,7 @@ VALUES (
 '1992-10-12',
 26);
 ```
-![picture](publishers1.png) 
+![picture](publisher1.png) 
 
 
 * Insert 3 new records to categories table
@@ -292,11 +292,11 @@ WHERE `publisher_id` = 1;
 
 Befor command the publishers table was:   
 
-![picture](publishers1.png)    
+![picture](publisher1.png)    
 
 After change publishers table is:   
 
-![picture](publishers2.png) 
+![picture](publisher2.png) 
 
 
 ### Select commands
@@ -307,7 +307,7 @@ USE bookStore;
 SELECT * FROM publishers;
 ```
 
-![picture](publishers2.png) 
+![picture](publisher2.png) 
 
 
 * Select only publisher_name and publisher_age from publishers table
@@ -315,7 +315,7 @@ SELECT * FROM publishers;
 USE bookStore;
 SELECT publisher_name , publisher_age FROM publishers;
 ```
-![picture](publishers3.png) 
+![picture](publisher3.png) 
 
 
 * Select only publisher_name and publisher_age from publishers table, only where publisher_age is between 27 to 30
@@ -326,7 +326,7 @@ SELECT publisher_name , publisher_age
 FROM publishers
 WHERE publisher_age>27 AND publisher_age<30;
 ```
-![picture](publishers4.png) 
+![picture](publisher4.png) 
 
 * Select only publisher_name and publisher_age from publishers table, ordered by the age (from low to high)
 ```sql
@@ -337,7 +337,7 @@ FROM publishers
 ORDER BY publisher_age;
 
 ```
-![picture](publishers5.png) 
+![picture](publisher5.png) 
 
 
 * select all rows from books_category table
