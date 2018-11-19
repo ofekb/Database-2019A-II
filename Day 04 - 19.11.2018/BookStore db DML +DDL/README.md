@@ -141,6 +141,6 @@ VALUES
 ('Ariel','Israel');
 
 ```
-![picture](cities.png) 
+![picture](cities1.png) 
 
 
