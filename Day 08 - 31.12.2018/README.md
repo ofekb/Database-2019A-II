@@ -3894,3 +3894,216 @@ BulkWriteResult({
 })
 ```
 
+# Step 2 - read data
+* get all info:
+```javascript
+db.countryInfo.find()
+```
+result:
+```
+{ "_id" : ObjectId("5c29d115b7f9e9c751065a7f"), "name" : "Israel", "topLevelDomain" : [ ".il" ], "alpha2Code" : "IL", "alpha3Code" : "ISR", "callingCodes" : [ "972" ], "capital" : "Jerusalem", "altSpellings" : [ "IL", "State of Israel", "Medīnat Yisrā'el" ], "region" : "Asia", "subregion" : "Western Asia", "population" : 8527400, "latlng" : [ 31.5, 34.75 ], "demonym" : "Israeli", "area" : 20770, "gini" : 39.2, "timezones" : [ "UTC+02:00" ], "borders" : [ "EGY", "JOR", "LBN", "SYR" ], "nativeName" : "יִשְׂרָאֵל", "numericCode" : "376", "currencies" : [ { "code" : "ILS", "name" : "Israeli new shekel", "symbol" : "₪" } ], "languages" : [ { "iso639_1" : "he", "iso639_2" : "heb", "name" : "Hebrew (modern)", "nativeName" : "עברית" }, { "iso639_1" : "ar", "iso639_2" : "ara", "name" : "Arabic", "nativeName" : "العربية" } ], "flag" : "https://restcountries.eu/data/isr.svg", "regionalBlocs" : [ ], "cioc" : "ISR" }
+{ "_id" : ObjectId("5c29d115b7f9e9c751065a80"), "name" : "Germany", "topLevelDomain" : [ ".de" ], "alpha2Code" : "DE", "alpha3Code" : "DEU", "callingCodes" : [ "49" ], "capital" : "Berlin", "altSpellings" : [ "DE", "Federal Republic of Germany", "Bundesrepublik Deutschland" ], "region" : "Europe", "subregion" : "Western Europe", "population" : 81770900, "latlng" : [ 51, 9 ], "demonym" : "German", "area" : 357114, "gini" : 28.3, "timezones" : [ "UTC+01:00" ], "borders" : [ "AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE" ], "nativeName" : "Deutschland", "numericCode" : "276", "currencies" : [ { "code" : "EUR", "name" : "Euro", "symbol" : "€" } ], "languages" : [ { "iso639_1" : "de", "iso639_2" : "deu", "name" : "German", "nativeName" : "Deutsch" } ], "flag" : "https://restcountries.eu/data/deu.svg", "regionalBlocs" : [ { "acronym" : "EU", "name" : "European Union", "otherAcronyms" : [ ], "otherNames" : [ ] } ], "cioc" : "GER" }
+```
+
+
+* get all info in nice format:
+```javascript
+db.countryInfo.find().pretty()
+```
+result:
+```
+{
+        "_id" : ObjectId("5c29d115b7f9e9c751065a7f"),
+        "name" : "Israel",
+        "topLevelDomain" : [
+                ".il"
+        ],
+        "alpha2Code" : "IL",
+        "alpha3Code" : "ISR",
+        "callingCodes" : [
+                "972"
+        ],
+        "capital" : "Jerusalem",
+        "altSpellings" : [
+                "IL",
+                "State of Israel",
+                "Medīnat Yisrā'el"
+        ],
+        "region" : "Asia",
+        "subregion" : "Western Asia",
+        "population" : 8527400,
+        "latlng" : [
+                31.5,
+                34.75
+        ],
+        "demonym" : "Israeli",
+        "area" : 20770,
+        "gini" : 39.2,
+        "timezones" : [
+                "UTC+02:00"
+        ],
+        "borders" : [
+                "EGY",
+                "JOR",
+                "LBN",
+                "SYR"
+        ],
+        "nativeName" : "יִשְׂרָאֵל",
+        "numericCode" : "376",
+        "currencies" : [
+                {
+                        "code" : "ILS",
+                        "name" : "Israeli new shekel",
+                        "symbol" : "₪"
+                }
+        ],
+        "languages" : [
+                {
+                        "iso639_1" : "he",
+                        "iso639_2" : "heb",
+                        "name" : "Hebrew (modern)",
+                        "nativeName" : "עברית"
+                },
+                {
+                        "iso639_1" : "ar",
+                        "iso639_2" : "ara",
+                        "name" : "Arabic",
+                        "nativeName" : "العربية"
+                }
+        ],
+        "flag" : "https://restcountries.eu/data/isr.svg",
+        "regionalBlocs" : [ ],
+        "cioc" : "ISR"
+}
+{
+        "_id" : ObjectId("5c29d115b7f9e9c751065a80"),
+        "name" : "Germany",
+        "topLevelDomain" : [
+                ".de"
+        ],
+        "alpha2Code" : "DE",
+        "alpha3Code" : "DEU",
+        "callingCodes" : [
+                "49"
+        ],
+        "capital" : "Berlin",
+        "altSpellings" : [
+                "DE",
+                "Federal Republic of Germany",
+                "Bundesrepublik Deutschland"
+        ],
+        "region" : "Europe",
+        "subregion" : "Western Europe",
+        "population" : 81770900,
+        "latlng" : [
+                51,
+                9
+        ],
+        "demonym" : "German",
+        "area" : 357114,
+        "gini" : 28.3,
+        "timezones" : [
+                "UTC+01:00"
+        ],
+        "borders" : [
+                "AUT",
+                "BEL",
+                "CZE",
+                "DNK",
+                "FRA",
+                "LUX",
+                "NLD",
+                "POL",
+                "CHE"
+        ],
+        "nativeName" : "Deutschland",
+        "numericCode" : "276",
+        "currencies" : [
+                {
+                        "code" : "EUR",
+                        "name" : "Euro",
+                        "symbol" : "€"
+                }
+        ],
+        "languages" : [
+                {
+                        "iso639_1" : "de",
+                        "iso639_2" : "deu",
+                        "name" : "German",
+                        "nativeName" : "Deutsch"
+                }
+        ],
+        "flag" : "https://restcountries.eu/data/deu.svg",
+        "regionalBlocs" : [
+                {
+                        "acronym" : "EU",
+                        "name" : "European Union",
+                        "otherAcronyms" : [ ],
+                        "otherNames" : [ ]
+                }
+        ],
+        "cioc" : "GER"
+}
+```
+* Select a specific field (in our case - we want to select the "cioc" field):
+```javascript
+db.countryInfo.find({},{"cioc":1})
+```
+result:
+```
+{ "_id" : ObjectId("5c29d115b7f9e9c751065a7f"), "cioc" : "ISR" }
+{ "_id" : ObjectId("5c29d115b7f9e9c751065a80"), "cioc" : "GER" }
+```
+* Select a specific field without the "_id"(in our case - we want to select the "cioc" field)
+```javascript
+db.countryInfo.find({},{"cioc":1,"_id":0})
+```
+result:
+```
+{ "cioc" : "ISR" }
+{ "cioc" : "GER" }
+```
+* Select only this : "region","subregion", "area" 
+```javascript
+db.countryInfo.find({},{"region":1,"subregion":1,"area":1,"_id":0})
+```
+result:
+```
+{ "region" : "Asia", "subregion" : "Western Asia", "area" : 20770 }
+{ "region" : "Europe", "subregion" : "Western Europe", "area" : 357114 }
+```
+* Select the number of the documents in the collection
+```javascript
+db.countryInfo.find().count()
+```
+result:
+```
+2
+```
+* Select the number of the documents in the collection, that returns true to the given condition: (in our case - find how many universities we have in israel)
+```javascript
+db.uniInfo.find({"country": "Israel"}).count()
+```
+result:
+```
+22
+```
+
+
+* Select documents by condition (in this case - we want to select the countries that have in "region" the value "Asia", and have in the "population" the value 8527400):
+```javascript
+db.countryInfo.find({"region": "Asia", "population": 8527400})
+```
+result:
+```
+{ "_id" : ObjectId("5c29d115b7f9e9c751065a7f"), "name" : "Israel", "topLevelDomain" : [ ".il" ], "alpha2Code" : "IL", "alpha3Code" : "ISR", "callingCodes" : [ "972" ], "capital" : "Jerusalem", "altSpellings" : [ "IL", "State of Israel", "Medīnat Yisrā'el" ], "region" : "Asia", "subregion" : "Western Asia", "population" : 8527400, "latlng" : [ 31.5, 34.75 ], "demonym" : "Israeli", "area" : 20770, "gini" : 39.2, "timezones" : [ "UTC+02:00" ], "borders" : [ "EGY", "JOR", "LBN", "SYR" ], "nativeName" : "יִשְׂרָאֵל", "numericCode" : "376", "currencies" : [ { "code" : "ILS", "name" : "Israeli new shekel", "symbol" : "₪" } ], "languages" : [ { "iso639_1" : "he", "iso639_2" : "heb", "name" : "Hebrew (modern)", "nativeName" : "עברית" }, { "iso639_1" : "ar", "iso639_2" : "ara", "name" : "Arabic", "nativeName" : "العربية" } ], "flag" : "https://restcountries.eu/data/isr.svg", "regionalBlocs" : [ ], "cioc" : "ISR" }
+```
+
+* Select a specific field from documents by condition (in this case - we want to select the field "name" only the countries that have in "region" the value "Asia", and have in the "population" the value 8527400):
+```javascript
+db.countryInfo.find({"region": "Asia", "population": 8527400},{ "_id" :0, "name" :1})
+```
+result:
+```
+{ "name" : "Israel" }
+``` 
