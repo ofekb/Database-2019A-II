@@ -151,7 +151,7 @@ db.movie.find({$or:[{synopsis: /dwarves/ },{synopsis:/hobbit/}]}).pretty()
 ```javascript
 db.movie.find({$and:[{synopsis: /gold/ },{synopsis:/dragon/}]}).pretty()
 ```
-##Delete Documents:
+## Delete Documents:
 
 * 1:
 ```javascript
