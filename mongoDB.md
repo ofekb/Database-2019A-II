@@ -1,14 +1,14 @@
-#MongoDB Final task
-##Create DB:
+# MongoDB Final task
+## Create DB:
 ```javascript
 use mongo_practice
 ```
-##Create collection:
+## Create collection:
 ```javascript
 db.createCollection("movies")
 ```
 
-##Insert Documents:
+## Insert Documents:
 ```javascript
 db.movies.insert([
 	{
@@ -69,37 +69,37 @@ db.movies.insert([
 
 
 
-##Query / Find Documents:
+## Query / Find Documents:
 
-*1:
+* 1:
 ```javascript
 db.movie.find().pretty()
 ```
-*2:
+* 2:
 ```javascript
 db.movie.find({writer:"Quentin Tarantino"}).pretty()
 ```
-*3:
+* 3:
 ```javascript
 db.movie.find({actors:{$in: ["Brad Pitt"]}}).pretty()
 ```
-*4:
+* 4:
 ```javascript
 db.movie.find({franchise:"The Hobbit"}).pretty()
 ```
-*5:
+* 5:
 ```javascript
 db.movie.find({year: { $gte :  1900, $lte : 1999}}).pretty()
 ```
-*6:
+* 6:
 ```javascript
 db.movie.find({year: { $gte :  2000, $lte : 2010}}).pretty()
 ```
 
 
-#Update Documents:
+# Update Documents:
 
-*1:
+* 1:
 ```javascript
 db.movie.findAndModify({
     query: { title: "The Hobbit: An Unexpected Journey" },
@@ -110,7 +110,7 @@ db.movie.findAndModify({
 ```
 
 
-*2:
+* 2:
 ```javascript
 db.movie.findAndModify({
     query: { title: "The Hobbit: The Desolation of Smaug" },
@@ -119,7 +119,7 @@ db.movie.findAndModify({
     }
 })
 ```
-*3:
+* 3:
 ```javascript
 db.movie.findAndModify({
     query: { title: "Pulp Fiction" },
@@ -129,35 +129,35 @@ db.movie.findAndModify({
 })
 ```
 
-##Text Search
+## Text Search
 
-*1:
+* 1:
 ```javascript
 db.movie.find({synopsis: {$regex: /Bilbo/}}).pretty()
 ```
-*2:
+* 2:
 ```javascript
 db.movie.find({synopsis: {$regex: /Gandalf/}}).pretty()
 ```
-*3:
+* 3:
 ```javascript
 db.movie.find({synopsis: /(?=^.*Bilbo)(?!^.*Gandalf).*/}).pretty()
 ```
-*4:
+* 4:
 ```javascript
 db.movie.find({$or:[{synopsis: /dwarves/ },{synopsis:/hobbit/}]}).pretty()
 ```
-*5:
+* 5:
 ```javascript
 db.movie.find({$and:[{synopsis: /gold/ },{synopsis:/dragon/}]}).pretty()
 ```
 ##Delete Documents:
 
-*1:
+* 1:
 ```javascript
 db.movie.remove({title: "Pee Wee Herman's Big Adventure"})
 ```
-*2:
+* 2:
 ```javascript
 db.movie.remove({title: "Avatar"})
 ```
