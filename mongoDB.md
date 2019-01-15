@@ -10,7 +10,7 @@ db.createCollection("movie")
 
 ## Insert Documents:
 ```javascript
-db.movies.insert([
+db.movie.insert([
 	{
         "title" : "Fight Club",
         "writer" : "Chuck Palahniuk",
