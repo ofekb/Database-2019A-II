@@ -5,7 +5,7 @@ use mongo_practice
 ```
 ## Create collection:
 ```javascript
-db.createCollection("movies")
+db.createCollection("movie")
 ```
 
 ## Insert Documents:
